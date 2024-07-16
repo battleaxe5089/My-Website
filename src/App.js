@@ -79,7 +79,7 @@ function Home() {
     <div className="App-main">
       <aside className="App-sidebar">
         <div className="App-picture">
-          <img src="/profilePic.jpg" alt="Profile" />
+          <img src="public/profilePic.jpg" alt="Profile" />
         </div>
         <div className="App-info">
           <p>Karch Hertelendy</p>
