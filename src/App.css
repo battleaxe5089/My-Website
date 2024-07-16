@@ -1,0 +1,318 @@
+body {
+  background-color: #0B0C10;
+  background-image: radial-gradient(#1F2833 15%, transparent 16%), radial-gradient(#1F2833 15%, transparent 16%);
+  background-position: 0 0, 8px 8px;
+  background-size: 16px 16px;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #C5C6C7;
+  scroll-behavior: smooth;
+}
+
+.App {
+
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App-header {
+  background-image: linear-gradient(135deg, #1F2833 25%, #0B0C10 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #1F2833;
+  color: #C5C6C7;
+}
+
+.App-header a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #66FCF1;
+  font-weight: bold;
+}
+
+.App-main {
+  display: flex;
+  margin-top: 20px;
+}
+
+.App-sidebar {
+  width: 30%;
+  padding: 20px;
+  margin-left: 75px;
+  background-color: #1F2833;
+  background-image: linear-gradient(135deg, #1F2833 25%, #0B0C10 100%);
+  border-radius: 20px;
+}
+
+.App-picture {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-picture img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.App-info {
+  background-color: #1F2833;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #C5C6C7;
+  border-radius: 20px;
+}
+
+.App-content {
+  width: 40%;
+  padding: 200px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 2;
+  color: #C5C6C7;
+}
+
+/* About Section Initial State */
+#about {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s, transform 1s;
+  width: 75%;
+  margin-left: 12%;
+  border-radius: 15px; /* Rounded corners */
+}
+
+/* Skills Section Initial State */
+#skills {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s, transform 1s;
+  width: 80%; /* Wider to fit more content */
+  margin-left: 10%; /* Centered */
+  border-radius: 15px; /* Rounded corners */
+}
+
+#education {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s, transform 1s;
+  width: 75%;
+  margin-left: 12%;
+  border-radius: 15px; /* Rounded corners */
+}
+
+#projects {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 1s, transform 1s;
+  width: 80%; /* Adjust width to fit more content */
+  margin-left: 10%; /* Centered */
+  border-radius: 15px; /* Rounded corners */
+}
+
+
+/* Section Visible State */
+#about.visible, #skills.visible, #education.visible, #projects.visible, #contacts.visible{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.About-content, .Skills-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #C5C6C7;
+  line-height: 2; /* Double spacing */
+}
+
+.Skills h2, h3 {
+  text-align: center;
+}
+
+.Skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px; /* Increased gap for more spacing */
+  width: 100%;
+  justify-items: center;
+  align-items: start;
+}
+
+.Skills-section {
+  background-color: #1F2833;
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  width: 90%; /* Adjust width to fit content better */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+}
+
+.Skills-Project {
+  background-color: #1F2833;
+  margin-top: -60px;
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  width: 90%; /* Adjust width to fit content better */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add subtle shadow for depth */
+}
+
+.Skills-Project h3 {
+  margin-bottom: 10px;
+}
+
+.Skills-Project ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.Skills-Project li {
+  background-color: #0B0C10;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.Skills-section h3 {
+  margin-bottom: 10px;
+}
+
+.Skills-section ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.Skills-section li {
+  background-color: #0B0C10;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.Education-content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #C5C6C7;
+  line-height: 2; /* Double spacing */
+}
+.Education-section li {
+  list-style-type: none;
+}
+
+.Github h1 {
+  text-align: center;
+}
+.Github h2 {
+  text-align: center;
+}
+/* Specific styles for Projects component */
+.Projects-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.Projects-list {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 20px;
+}
+
+.Project-item {
+  background-color: #1F2833;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  color: #C5C6C7;
+}
+
+.Project-item:hover {
+  background-color: #45A29E;
+}
+
+.Project-details {
+  width: 65%;
+  padding: 20px;
+  background-color: #1F2833;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #C5C6C7;
+  line-height: 1.5;
+}
+
+.Project-details h3 {
+  margin-bottom: 10px;
+}
+
+.Project-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Project-images img {
+  width: 250px;
+  height: 500px;
+  margin: 0 10px;
+}
+
+.Project-images button {
+  background-color: #1F2833;
+  color: #C5C6C7;
+  border: none;
+  margin: 100px;
+  padding: 20px;
+  cursor: pointer;
+  border-radius: 25%;
+  transition: background-color 0.3s;
+}
+
+.Project-images button:hover {
+  background-color: #45A29E;
+  border-radius: 25%;
+}
+
+/* Specific styles for Contact component */
+.Contact-content {
+  padding: 20px;
+  text-align: center;
+  background-color: #1F2833;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #C5C6C7; /* Text color */
+  margin: 20px auto;
+  max-width: 600px; /* Center the content and restrict its width */
+}
+
+.Contact-content h2 {
+  margin-bottom: 20px;
+  color: #66FCF1; /* Heading color */
+}
+
+.Contact-content p {
+  margin: 10px 0;
+}
