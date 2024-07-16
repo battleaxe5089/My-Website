@@ -23,7 +23,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://battleaxe5089.github.io/your-repo-name",
+  "homepage": "https://battleaxe5089.github.io/My-Website.git",
   "eslintConfig": {
     "extends": [
       "react-app",
